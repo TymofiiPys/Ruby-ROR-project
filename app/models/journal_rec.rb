@@ -1,4 +1,7 @@
 class JournalRec < ApplicationRecord
+  validates :surname, presence: :true, length: { maximum: 64}
+  validates :group, presence: :true, length: { maximum: 64}
+
   def average
     sum = 0
     sum += mark1.nil? ? 0 : mark1

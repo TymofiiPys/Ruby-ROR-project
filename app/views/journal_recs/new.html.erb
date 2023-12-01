@@ -1,26 +1,3 @@
 <h1>Новий студент</h1>
-<%= form_with model: @journal_rec do |form| %>
-  <div>
-    <%= form.label :surname %><br>
-    <%= form.text_field :surname %>
-  </div>
-  <div>
-    <%= form.label :group %><br>
-    <%= form.text_field :group %>
-  </div>
-  <div>
-    <%= form.label :mark1 %><br>
-    <%= form.text_field :mark1 %>
-  </div>
-  <div>
-    <%= form.label :mark2 %><br>
-    <%= form.text_field :mark2 %>
-  </div>
-  <div>
-    <%= form.label :mark3 %><br>
-    <%= form.text_field :mark3 %>
-  </div>
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+
+<%= render "form", journal_rec: @journal_rec %>

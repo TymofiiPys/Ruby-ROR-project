@@ -1,5 +1,14 @@
-Прізвище: <%= @journal_rec.surname %>
-Група: <%= @journal_rec.group %>
-Оцінка за геометрію: <%= @journal_rec.mark1 %>
-алгебру: <%= @journal_rec.mark2 %>
-інформатику: <%= @journal_rec.mark3 %>
+<div>
+  Прізвище: <%= @journal_rec.surname %>
+  Група: <%= @journal_rec.group %>
+  Оцінка за геометрію: <%= @journal_rec.mark1 %>
+  алгебру: <%= @journal_rec.mark2 %>
+  інформатику: <%= @journal_rec.mark3 %>
+</div>
+<ul>
+  <li><%= link_to "Редагувати дані про студента", edit_journal_rec_path(@journal_rec) %></li>
+  <li><%= link_to "Видалити студента з БД", journal_rec_path(@journal_rec), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Точно?"
+                  } %></li>
+</ul>
