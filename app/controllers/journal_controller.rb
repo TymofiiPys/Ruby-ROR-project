@@ -4,6 +4,7 @@ class JournalController < ApplicationController
   end
 
   def show
+    @journal_rec = JournalRec.find(params[:id])
   end
 
   def new

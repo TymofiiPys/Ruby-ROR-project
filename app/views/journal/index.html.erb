@@ -1,13 +1,11 @@
 <h1>Журнал</h1>
-
 <ul>
   <% @journal_recs.each do |journal_rec| %>
     <li>
-      Прізвище: <%= journal_rec.surname %>
-      Група: <%= journal_rec.group %>
-      Оцінка за геометрію: <%= journal_rec.mark1 %>
-      алгебру: <%= journal_rec.mark2 %>
-      інформатику: <%= journal_rec.mark3 %>
+      <a href="/journal/<%= journal_rec.id%>">
+        Прізвище: <%= journal_rec.surname %>
+      </a>
+      Середня оцінка: <%= ((journal_rec.mark1 + journal_rec.mark2 + journal_rec.mark3) / 3).round(2)  %>
     </li>
   <% end %>
 </ul>
