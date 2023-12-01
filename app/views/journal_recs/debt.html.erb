@@ -1,0 +1,8 @@
+<ul>
+  <% @debt.each do |journal_rec| %>
+    <li>
+      Прізвище: <%= link_to journal_rec.surname, journal_rec%>
+      Середня оцінка: <%= journal_rec.average %>
+    </li>
+  <% end %>
+</ul>

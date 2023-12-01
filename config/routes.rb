@@ -9,5 +9,13 @@ Rails.application.routes.draw do
   # patch 'journal/:id(.:format)', to: 'journal#update'
   # delete 'journal/:id(.:format)', to: 'journal#destroy'
 
-  resources :journal_recs
+  resources :journal_recs do
+    collection do
+      get 'debt'
+      get 'marks_percent'
+      get 'good_marks_percent'
+      get 'best_subj'
+      get 'groups_marks_desc'
+    end
+  end
 end
