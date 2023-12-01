@@ -1,0 +1,2 @@
+module JournalRecsHelper
+end

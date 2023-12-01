@@ -2,9 +2,7 @@
 <ul>
   <% @journal_recs.each do |journal_rec| %>
     <li>
-      <a href="/journal/<%= journal_rec.id%>">
-        Прізвище: <%= journal_rec.surname %>
-      </a>
+      Прізвище: <%= link_to journal_rec.surname, journal_rec%>
       Середня оцінка: <%= journal_rec.average %>
     </li>
   <% end %>
