@@ -1,0 +1,2 @@
+class JournalRec < ApplicationRecord
+end
