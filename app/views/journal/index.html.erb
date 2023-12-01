@@ -5,7 +5,7 @@
       <a href="/journal/<%= journal_rec.id%>">
         Прізвище: <%= journal_rec.surname %>
       </a>
-      Середня оцінка: <%= ((journal_rec.mark1 + journal_rec.mark2 + journal_rec.mark3) / 3).round(2)  %>
+      Середня оцінка: <%= journal_rec.average %>
     </li>
   <% end %>
 </ul>
